@@ -2,9 +2,11 @@ import { Divider, HStack, SimpleGrid, VStack, Link, Stack } from '@chakra-ui/rea
 import React from 'react'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
-import { GITHUB_PROFILE, LINKEDIN_PROFILE, TWITTER_PROFILE } from '../../theme/constraints'
+import { GITHUB_PROFILE, LINKEDIN_PROFILE, TWITTER_PROFILE } from '../../constants'
+import { Link as LinkType } from '@/types/link';
 
-const firstGroup = [
+
+const firstGroup: LinkType[] = [
     {
         href: '/',
         label: 'Home',

@@ -16,7 +16,7 @@ export const Header = () => {
     >
         <NextLink href="/" passHref>
             <Link>
-                <Heading size="sm">	&#60;PacoDesigns &#47;&#62;</Heading>
+                <Heading size="sm">	PacoCodes</Heading>
             </Link>
         </NextLink>
         <HStack alignItems="center" spacing={{ base: 0, md: 2 }}>
