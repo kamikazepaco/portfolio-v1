@@ -7,14 +7,19 @@ import React from 'react'
 export const Header = () => {
     const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <HStack 
+    <HStack
         as='nav'
-        width="full" 
-        justifyContent="space-between" 
-        alignItems="center" 
-        py={3}>
-        <Heading size="sm">Paco.Designs</Heading>
-        <HStack alignItems="center" spacing={2}> 
+        width="full"
+        justifyContent="space-between"
+        alignItems="center"
+        py={3}
+    >
+        <NextLink href="/" passHref>
+            <Link>
+                <Heading size="sm">	&#60;PacoDesigns &#47;&#62;</Heading>
+            </Link>
+        </NextLink>
+        <HStack alignItems="center" spacing={{ base: 0, md: 2 }}>
             <NextLink href="/projects" passHref>
                 <Button as={Link} size="sm" variant="ghost">Projects</Button>
             </NextLink>
@@ -24,12 +29,12 @@ export const Header = () => {
             <NextLink href="/blog" passHref>
                 <Button as={Link} size="sm" variant="ghost">Blog</Button>
             </NextLink>
-            <IconButton 
-                aria-label="toggle theme" 
-                icon={colorMode === 'light' ? <IoMoon /> : <IoSunny color="yellow"/>} 
+            <IconButton
+                aria-label="toggle theme"
+                icon={colorMode === 'light' ? <IoMoon /> : <IoSunny color="yellow"/>}
                 variant="ghost"
                 size="sm"
-                onClick={toggleColorMode} /> 
+                onClick={toggleColorMode} />
         </HStack>
     </HStack>
   )
